@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Clock View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClockViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-kk-xgn" customClass="ClockView" customModule="Clock" customModuleProvider="target">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wGQ-pd-VSK"/>
+                                    <constraint firstAttribute="height" constant="300" id="xvH-x4-v79"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-vl-Bgb" customClass="ThemeClockView" customModule="Clock" customModuleProvider="target">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Eoy-3s-6um"/>
+                                    <constraint firstAttribute="width" constant="300" id="x0j-SD-Kcm"/>
+                                </constraints>
+                            </view>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ir-NY-pf3">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="history" id="hgy-F4-mIo"/>
+                                    <tabBarItem tag="1" systemItem="contacts" id="9WU-ai-Dt1"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ENl-jW-vIf"/>
+                                </connections>
+                            </tabBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UYC-vl-Bgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7eI-gq-6wg"/>
+                            <constraint firstItem="4ir-NY-pf3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AUz-4U-YBt"/>
+                            <constraint firstItem="UYC-vl-Bgb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gda-Fb-3Xu"/>
+                            <constraint firstItem="e8A-kk-xgn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q0c-ap-gUz"/>
+                            <constraint firstItem="4ir-NY-pf3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4i-FO-UBa"/>
+                            <constraint firstItem="e8A-kk-xgn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bq0-l3-qFf"/>
+                            <constraint firstItem="4ir-NY-pf3" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="fHm-4d-cIv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clockView" destination="e8A-kk-xgn" id="RXT-Im-QGt"/>
+                        <outlet property="themeClockView" destination="UYC-vl-Bgb" id="tVF-Gr-Qtt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
